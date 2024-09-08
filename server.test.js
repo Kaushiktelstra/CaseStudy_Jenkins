@@ -20,12 +20,12 @@ describe('API Endpoints', () => {
         const res = await request(app)
             .post('/auth/register')
             .send({
-                f_name: 'John',
-                l_name: 'Doe',
+                f_name: 'Kaushik',
+                l_name: 'Naik',
                 email: 'kaushikaushik223@gmail.com',
-                password: 'password123',
+                password: 'Kaushik@9876',
                 phone_no: '1234567890',
-                address: '123 Main St',
+                address: 'Udupi',
             });
 
         expect(res.statusCode).toEqual(201);
@@ -52,7 +52,7 @@ describe('API Endpoints', () => {
             .post('/auth/login')
             .send({
                 email: 'kaushikaushik223@gmail.com',
-                password: 'password123',
+                password: 'Kaushik@9876',
             });
 
         expect(res.statusCode).toEqual(200);
